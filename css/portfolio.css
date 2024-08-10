@@ -1,0 +1,552 @@
+
+body{
+    background-color: #f8f9fa; /* Off-White */
+    color: #1e88e5;
+    font-family: 'Merriweather',georgia,sans-serif; /* Adding a font for better readability */
+    line-height: 1.6; /* Improve readability */
+}
+
+header {
+    background-color: rgb(234, 185, 27);
+    width: 100%;
+    font-size: xx-large;
+    height: 60px; /* Fixed height */
+    padding: 0; /* Remove padding */
+    position: fixed;
+    font-family: 'Montserrat', sans-serif;
+    top: 0; /* Ensure it's fixed to the top */
+    z-index: 1000; /* Ensure it stays above other elements */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Adding subtle shadow for depth */
+    transition: background-color 0.3s ease; /* Smooth transition on hover */
+}
+
+header nav ul li:hover {
+    background-color: rgba(0, 0, 0, 0.1); /* Subtle hover effect */
+    border-radius: 5px; /* Rounded corners for hover effect */
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%; /* Ensure nav takes full height of the header */
+}
+
+header nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 0; /* Remove padding */
+    margin: 0; /* Remove margin */
+    font-weight: bold;
+}
+a{
+  
+    text-decoration: none;
+}
+
+header nav ul li {
+    margin: 0 30px;
+    position: relative; 
+    text-decoration: none;
+}
+
+header nav ul li::before {
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 3px;
+    bottom: -1px;
+    left: 0;
+    background-color: #6a1b9a;
+    visibility: hidden;
+    transition: all 0.3s ease-in-out;
+}
+
+header nav ul li:hover::before {
+    visibility: visible;
+    width: 100%;
+}
+
+header nav h2 {
+    text-shadow: 2px 2px 5px #090909;
+    margin: 0 5%;
+    line-height: 1; /* Adjust line height to reduce space */
+    transition: color 0.3s ease;
+}
+
+header nav h2:hover {
+    color: #ff4081; /* Adding hover effect */
+}
+
+.first {
+    display: flex;
+    justify-content: center; /* Ensure content stacks vertically */
+    margin-top: 60px; /* Ensure content is not hidden under the header */
+    padding: 20px;
+    background-color: #f4f4f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Adding box shadow */
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    opacity: 0; /* Start hidden for fade-in effect */
+    transform: translateY(20px); /* Start slightly below for slide-up effect */
+    animation: fadeInUp 1s forwards; /* Apply fade-in and slide-up animation */
+}
+
+.first:hover {
+    transform: scale(1.01); /* Subtle zoom effect on hover */
+}
+
+.first .home {
+    text-align: center; /* Center text for better alignment */
+    font-size: xx-large;
+    margin: 5%;
+    border-bottom: 3px solid #333333;
+    font-style: italic;
+    font-weight: bold;
+
+}
+
+.first .home h4, .first .home p {
+    opacity: 0; /* Start hidden for fade-in effect */
+    transform: translateY(20px); /* Start slightly below for slide-up effect */
+    animation: fadeInUp 1s forwards; /* Apply animation */
+}
+
+.first .home h4:first-of-type {
+    animation-delay: 0.5s; /* Delay for effect */
+}
+
+.first .home h4:nth-of-type(2) {
+    animation-delay: 1s; /* Delay for effect */
+}
+
+.first .home p {
+    animation-delay: 1.5s; /* Delay for effect */
+}
+
+.first .home .social-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px; /* Space between icons */
+    font-size: x-large;
+    color: #fff;
+    opacity: 0; /* Start hidden for fade-in effect */
+    transform: translateY(20px); /* Start slightly below for slide-up effect */
+    animation: fadeInUp 1s forwards;
+    animation-delay: 2s; /* Delay for effect */
+}
+
+.first .home .social-icons .icon {
+    width: 34px; /* Size of icons */
+    height: 34px; /* Size of icons */
+    transition: transform 0.3s ease; /* Smooth scale effect on hover */
+}
+
+.first .home .social-icons .icon:hover {
+    transform: scale(1.1); /* Slightly increase size on hover */
+}
+
+.first .saad {
+    width: 40%;
+    aspect-ratio: 1; /* Keep the aspect ratio */
+    border: 3px solid #333333; /* Set border width, style, and color */
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adding shadow to the image */
+    transition: transform 0.3s ease;
+}
+
+.first .saad:hover {
+    transform: scale(1.05); /* Subtle zoom effect on hover */
+}
+
+/* Keyframes for fade-in and slide-up effect */
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+
+footer nav ul {
+    display: flex;
+    justify-content: space-evenly;
+    list-style-type: none;
+    padding: 20px;
+    margin: 0;
+    background-color: #333333;
+}
+
+footer nav ul li {
+    font-size: x-large;
+    color: #fff;
+    transition: color 0.3s ease;
+    font-weight: bold;
+}
+
+footer nav ul li:hover {
+    color: #ff4081; /* Adding hover effect */
+}
+
+.second {
+    margin: 5%;
+    display: flex;
+    border-top: 3px solid #dad1d1;
+    padding: 20px;
+    background-color: #f4f4f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Adding box shadow */
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    position: relative;
+}
+
+.second .about-content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.second .about-content h2 {
+    text-align: justify;
+    margin-top: 5%;
+    font-size: x-large;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 5px #fff;
+   
+    border-bottom: 3px solid #333333;
+    transition: color 0.3s ease, text-shadow 0.3s ease, opacity 0.5s ease;
+    opacity: 1; /* Ensure text is visible by default */
+    transform: translateY(0); /* No initial offset */
+}
+
+.second.visible .about-content h2 {
+    text-shadow: 2px 2px 5px #ff4081; /* Change text shadow on reveal */
+}
+
+.second .about-content h2:hover {
+    color: #ff4081; /* Adding hover effect */
+    text-shadow: 4px 4px 10px #ff4081; /* Enhanced shadow on hover */
+}
+
+.second h1 {
+    font-weight: bold;
+    margin-bottom: 10px;
+    font-size: xx-large;
+    margin: 2% 15%;
+    opacity: 1; /* Ensure text is visible by default */
+    transform: translateX(0); /* No initial offset */
+    transition: opacity 0.5s ease, transform 0.5s ease, color 0.3s ease;
+}
+
+.second.visible h1 {
+    color: #333;
+}
+
+.second h1:hover {
+    color: #ff4081; /* Adding hover effect */
+}
+
+.second .img {
+    width: 35%;
+    height: 80%;
+    border-radius: 50%;
+    margin: 0 10% 0 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adding shadow to the image */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.second .img:hover {
+    transform: scale(1.05); /* Subtle zoom effect on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
+}
+
+.third
+{
+    margin: 5%;
+    display: block;
+    border-top: 3px solid #dad1d1;
+    padding: 20px;
+    background-color: #f4f4f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Adding box shadow */
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+
+.skills {
+    width: 100%;
+}
+
+.third  h4 {
+    margin-top: 10px;
+    font-weight: bold;
+    font-size: xx-large;
+    margin-bottom: 10px;
+}
+
+.skills ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 20px 0;
+}
+
+.skills li {
+    margin-bottom: 10px;
+    transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+/* Keyframes for width animation */
+
+
+.skill-bar {
+    height: 20px;
+    background-color: #ddd;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    position: relative;
+    overflow: hidden;
+    width: 15%; /* Default width */
+    transition: width 0.8s ease-in-out;
+    animation: expandWidth 1.8s ease-in-out forwards; /* Apply the animation */
+    animation-play-state: paused; /* Start paused */
+    opacity: 0; /* Hidden by default */
+    transition: opacity 0.8s ease-in-out; /* Smoothly transition opacity */
+}
+
+@keyframes expandWidth {
+    from {
+        width: 15%; /* Start at default width */
+    }
+    to {
+        width: var(--target-width, 15%); /* Expand to target width */
+    }
+}
+
+.skill-bar::before {
+    content: attr(data-skill);
+    position: absolute;
+    left: 10px;
+    top: 0;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    color: #fff;
+    z-index: 1;
+}
+
+/* Define target widths using CSS variables */
+.skill-bar[data-skill="Problem Solving"] {
+    --target-width: 80%;
+    background-color: hsl(120, 70%, 50%); /* Green */
+}
+
+.skill-bar[data-skill="Languages"] {
+    --target-width: 70%;
+    background-color: hsl(200, 80%, 50%); /* Bright Blue */
+}
+
+.skill-bar[data-skill="Web Development"] {
+    --target-width: 75%;
+    background-color: hsl(30, 100%, 50%); /* Orange */
+}
+
+.skill-bar[data-skill="Databases"] {
+    --target-width: 65%;
+    background-color: hsl(280, 60%, 50%); /* Purple */
+}
+
+
+/* When the element is visible, start the animation and make it fully opaque */
+.skill-bar.visible {
+    animation-play-state: running; /* Resume the animation */
+    opacity: 1; /* Make the skill bar visible */
+}
+
+/* Hover effect */
+.skills li:hover {
+    color: #ff4081; 
+    transform-origin: left;
+    transform: scale(1.03);
+}
+
+
+.fourth
+{
+    margin: 5%;
+    
+    border-top: 3px solid #dad1d1;
+    padding: 20px;
+    background-color: #f4f4f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Adding box shadow */
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+.fourth h4{
+    font-weight: bold;
+    font-size: xx-large;
+    margin-bottom: 10px;
+    margin-top: 0;
+}
+.projects {
+    display: grid;
+    grid-auto-flow: column; /* Arrange items in a horizontal row */
+    grid-template-rows: 1fr 1fr; /* Single row */
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Responsive columns */
+    gap: 20px; /* Gap between grid items */
+    padding-bottom: 20px; /* Avoid cutting off the scrollbar */
+}
+
+.projects .proj {
+    position: relative; /* For absolute positioning of the gradient border */
+    padding: 10px;
+    margin: 2%;
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Slightly larger shadow for depth */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effect */
+    overflow: hidden; /* Ensure text doesn't overflow */
+}
+
+.projects .proj::before {
+    content: '';
+    position: absolute;
+    top: -4px; /* Increased to make the border more visible */
+    left: -4px; /* Increased to make the border more visible */
+    right: -4px; /* Increased to make the border more visible */
+    bottom: -4px; /* Increased to make the border more visible */
+    z-index: -1;
+    border-radius: 15px;
+    background: linear-gradient(135deg, #e3f2fd, #f3e5f5, #ffebee, #fff8e1, #e8f5e9);
+    background-size: 300% 300%; /* Slightly reduced size for a softer look */
+    animation: gradient-animation 20s ease infinite; /* Slower animation for a more subtle effect */
+}
+
+.projects .proj:hover {
+    transform: scale(1.03); /* Slightly increased zoom effect for better visibility */
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15); /* Enhanced shadow on hover */
+}
+
+/* Text animation */
+.projects .proj .text-content {
+    opacity: 0;
+    transform: translateX(-20px); /* Start text 20px to the left */
+    transition: opacity 0.5s ease, transform 0.5s ease; /* Smooth transition for opacity and transform */
+}
+
+.projects .proj:hover .text-content {
+    opacity: 1;
+    transform: translateX(0); /* Move text to its original position */
+}
+
+
+@keyframes gradient-animation {
+    0% { background-position: 0% 0%; }
+    50% { background-position: 100% 100%; }
+    100% { background-position: 0% 0%; }
+}
+/* General Footer Styles */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 40px 20px;
+    font-size: 16px;
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact {
+    margin-bottom: 20px;
+}
+
+.contact h4 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+    color: #ff4081; /* Accent color for heading */
+}
+
+.social-links {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.social-links li {
+    margin: 0 10px;
+}
+
+.social-links .icon {
+    width: 30px;
+    height: 30px;
+    transition: transform 0.3s ease;
+}
+
+.social-links .icon:hover {
+    transform: scale(1.1);
+}
+
+.form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+.contact-form input[type="submit"] {
+    background-color: #ff4081;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.contact-form input[type="submit"]:hover {
+    background-color: #e33371;
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+        font-size: 14px;
+    }
+}
+
+::-webkit-scrollbar {
+    width: 14px; /* Width of the scrollbar */
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1; /* Background color of the track */
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--scrollbar-thumb-color,#888); /* Color of the scrollbar handle */
+    border-radius: 10px; /* Rounded corners */
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555; /* Color of the scrollbar handle on hover */
+}
